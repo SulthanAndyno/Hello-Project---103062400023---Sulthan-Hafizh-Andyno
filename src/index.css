@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --color-darkest: #1D1616;
+  --color-dark-red: #8E1616;
+  --color-bright-red: #D84040;
+  --color-light-grey: #EEEEEE;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-darkest);
+  color: var(--color-light-grey);
+  line-height: 1.6;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+a {
+  color: var(--color-light-grey);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-bright-red);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Penting untuk efek animasi */
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif; /* Font berbeda untuk judul */
+  color: var(--color-light-grey);
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+h1 { font-size: 3.8em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2em; }
+
+/* Underline effect for titles */
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-bright-red);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Global Button Style */
+.btn {
+  display: inline-block;
+  background-color: var(--color-bright-red);
+  color: var(--color-light-grey);
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(216, 64, 64, 0.3);
+}
+
+.btn:hover {
+  background-color: var(--color-dark-red);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(216, 64, 64, 0.5);
+}
+
+/* Highlight text */
+.highlight {
+  color: var(--color-bright-red);
+  font-weight: 600;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-bright-red), var(--color-dark-red));
+  z-index: 10000;
+  width: 0%;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  display: none; /* Hidden by default, shown on mobile */
+  font-size: 2em;
+  color: var(--color-light-grey);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 22, 22, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-overlay .nav-links {
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.mobile-nav-overlay .nav-links a {
+  font-size: 1.8em;
+  padding: 10px 0;
+}
+
+.mobile-nav-overlay .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2.5em;
+  color: var(--color-bright-red);
+  cursor: pointer;
 }
