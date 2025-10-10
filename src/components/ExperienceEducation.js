@@ -11,18 +11,18 @@ const ExperienceEducation = () => {
   const timelineData = [
     {
       type: 'education',
-      title: 'S1 Informatika',
+      title: 'S1 Teknologi Informasi',
       institution: 'Universitas Telkom',
-      period: '2023 - Now',
+      period: '2024 - Now',
       description: 'Memperdalam ilmu komputer, struktur data, algoritma, dan pengembangan perangkat lunak.',
       side: 'left',
     },
     {
       type: 'experience',
-      title: 'Anggota Divisi IT',
-      institution: 'Himpunan Mahasiswa Fiktif',
+      title: 'Koordinator Pembekalan Akademik',
+      institution: 'Dewan Perwakilan Mahasiswa (DPM) Universitas Telkom',
       period: 'Jan 2024 - Sekarang',
-      description: 'Bertanggung jawab dalam pengembangan dan pemeliharaan website himpunan, serta support teknis acara.',
+      description: 'Bertanggung jawab dalam pengembangan akademik mahasiswa.',
       side: 'right',
     },
     {
@@ -38,7 +38,7 @@ const ExperienceEducation = () => {
       title: 'Freelance Web Developer',
       institution: 'Self-Employed',
       period: 'Maret 2023 - Sekarang',
-      description: 'Membangun berbagai website klien menggunakan React dan WordPress, fokus pada responsivitas dan UX.',
+      description: 'Membangun berbagai website klien menggunakan React, fokus pada responsivitas dan UX.',
       side: 'right',
     },
   ];
