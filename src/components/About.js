@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import profileImage from '../assets/me.jpg';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -45,7 +46,7 @@ const About = () => {
         <div className="about-columns">
           <motion.div className="image-wrapper" variants={itemVariants}>
             <motion.img 
-              src="https://via.placeholder.com/250/D84040/EEEEEE?text=Your+Photo" 
+              src={profileImage}
               alt="Profil Sulthan Andyno" 
               className="profile-image" 
               whileHover={{ rotate: 5, scale: 1.05 }}
@@ -54,13 +55,13 @@ const About = () => {
           </motion.div>
           <motion.div className="text-content" variants={itemVariants}>
             <p>
-              I’m an <span className="highlight">IT student</span> who loves exploring the bridge between logic and creativity. Currently delving deep into web development, especially with <span className="highlight">React.js</span>, to build user-centric and performant applications.
+              I’m an Information Technology student at Telkom University Jakarta, driven by curiosity and a love for creating interactive and meaningful digital experiences. My main focus is on front-end development, where I enjoy crafting interfaces that feel intuitive, responsive, and alive.
             </p>
             <p>
-              My journey started at <span className="highlight">Universitas Telkom</span>, pursuing a Bachelor's degree in Informatics. I thrive on solving complex problems, learning new technologies, and contributing to open-source projects. My philosophy is to craft digital experiences with both precision and passion.
+              My journey began with a fascination for how design and logic can blend seamlessly to build something both beautiful and functional. Since then, I’ve been continuously learning, experimenting, and refining my skills from building dynamic layouts to improving user experiences through thoughtful design.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new design patterns, reading tech blogs, or trying out new programming challenges.
+              My goal is to grow into a developer who doesn’t just build products, but creates experiences — ones that connect people, simplify lives, and leave a lasting impression.
             </p>
             <motion.a 
               href="/path/to/your-cv.pdf" // Ganti dengan path CV kamu
