@@ -1,6 +1,7 @@
 // Hero.js
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTypewriter, Cursor } from 'react-simple-typewriter'; // ADDED THIS IMPORT
 
 const Hero = () => {
   const containerVariants = {
@@ -19,6 +20,28 @@ const Hero = () => {
     visible: { y: 0, opacity: 1 },
   };
 
+  // Typewriter effect for name
+  const [nameText] = useTypewriter({
+    words: ['Sulthan Andyno'],
+    loop: false, // Only type once
+    typeSpeed: 70,
+    deleteSpeed: 50,
+    delaySpeed: 1000,
+  });
+
+  // Typewriter effect for description
+  const [descriptionText] = useTypewriter({
+    words: [
+      'Frontend Developer | Information Technology Student',
+      'Crafting digital experiences with logic & passion'
+    ],
+    loop: true, // Loop indefinitely
+    typeSpeed: 50,
+    deleteSpeed: 30,
+    delaySpeed: 2000,
+  });
+
+
   return (
     <section id="hero" className="hero">
       <motion.div
@@ -27,10 +50,15 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 variants={itemVariants}>Hi, I’m <span className="highlight">Sulthan Andyno</span> 👋</motion.h1>
+        <motion.h1 variants={itemVariants}>
+          Hi, I’m <span className="highlight">
+            {nameText}
+            <Cursor cursorStyle='|' />
+          </span> 👋
+        </motion.h1>
         <motion.p variants={itemVariants}>
-          Frontend Developer | Information Technology Student <br />
-          Crafting digital experiences with logic & passion
+          {descriptionText}
+          <Cursor cursorStyle='|' />
         </motion.p>
         <motion.div 
           className="cta-buttons"
