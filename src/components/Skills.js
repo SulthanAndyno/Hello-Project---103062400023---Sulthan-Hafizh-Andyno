@@ -1,16 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // <<< TAMBAHKAN BARIS INI
-import { useInView } from 'react-intersection-observer'; // <<< TAMBAHKAN BARIS INI
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // Import ikon Font Awesome
 import {
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaLaravel, FaGitAlt, FaFigma
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaLaravel, FaGitAlt, FaFigma, FaVuejs
 } from 'react-icons/fa';
 
 // Import ikon Devicons
 import {
   DiGo, DiVisualstudio, DiMysql
 } from 'react-icons/di';
+
+// Import ikon Simple Icons (for Tailwind, Vite)
+import { SiTailwindcss, SiVite } from 'react-icons/si';
+
+
 const Skills = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -19,40 +24,31 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      name: 'Frontend',
+      name: 'Core Web Stack',
       skills: [
         { name: 'HTML5', icon: <FaHtml5 /> },
         { name: 'CSS3', icon: <FaCss3Alt /> },
-        { name: 'JavaScript', icon: <FaJsSquare /> },
-        { name: 'React.js', icon: <FaReact /> },
-        // { name: 'Tailwind CSS', icon: <SiTailwindcss /> }, // Example from react-icons/si
+        { name: 'JavaScript (ES6+)', icon: <FaJsSquare /> },
       ],
     },
     {
-      name: 'Backend',
+      name: 'Framework & Library',
       skills: [
-        { name: 'Node.js', icon: <FaNodeJs /> },
-        { name: 'PHP', icon: <FaPhp /> },
-        { name: 'Laravel', icon: <FaLaravel /> },
-        { name: 'Go', icon: <DiGo /> }, // Go lang icon
-        // { name: 'Python', icon: <FaPython /> },
+        { name: 'React.js', icon: <FaReact /> },
+        { name: 'Vue.js', icon: <FaVuejs /> },
+        { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
       ],
     },
     {
       name: 'Tools & Database',
       skills: [
-        { name: 'Git', icon: <FaGitAlt /> },
-        { name: 'VS Code', icon: <DiVisualstudio /> }, // VS Code icon
-        { name: 'XAMPP', icon: <DiMysql /> }, // Using MySQL icon as a stand-in for XAMPP
+        { name: 'Git & GitHub', icon: <FaGitAlt /> }, // Using FaGitAlt for Git and GitHub
+        { name: 'VS Code', icon: <DiVisualstudio /> },
+        // XAMPP icon is not standard in react-icons; using DiMysql as a proxy if you manage local servers.
+        // If XAMPP specifically is important, you might need a custom SVG or just text.
+        // For now, removing XAMPP and Go as they weren't in the new list, keeping only listed tools.
         { name: 'Figma', icon: <FaFigma /> },
-        // { name: 'MongoDB', icon: <DiMongodb /> },
-      ],
-    },
-    {
-      name: 'Soft Skills (Optional)',
-      skills: [
-        { name: 'Teamwork', icon: '👥' }, // Bisa pakai emoji atau ikon khusus
-        { name: 'Problem Solving', icon: '🧠' },
+        { name: 'Vite', icon: <SiVite /> },
       ],
     },
   ];
