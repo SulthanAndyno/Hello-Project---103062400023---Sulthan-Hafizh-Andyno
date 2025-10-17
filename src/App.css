@@ -1,5 +1,4 @@
-/* src/App.css */
-
+/* app css */
 /* Navbar */
 .navbar {
   background-color: var(--color-darkest);
@@ -62,7 +61,8 @@
   align-items: center;
   text-align: center;
   padding-top: 80px;
-  background: linear-gradient(rgba(29, 22, 22, 0.85), rgba(29, 22, 22, 0.85)), url('https://via.placeholder.com/1920x1080/1D1616/8E1616?text=Hero+Background') no-repeat center center/cover;
+  /* ADDED 'fixed' for parallax effect */
+  background: linear-gradient(rgba(29, 22, 22, 0.85), rgba(29, 22, 22, 0.85)), url('https://via.placeholder.com/1920x1080/1D1616/8E1616?text=Hero+Background') no-repeat center center/cover fixed;
   /* Tambahkan pseudo-element untuk efek parallax/overlay jika ingin */
   position: relative;
   overflow: hidden;
@@ -91,6 +91,19 @@
   margin-bottom: 15px;
   color: var(--color-light-grey);
 }
+
+/* Added glow to highlight text in hero h1 */
+.hero h1 .highlight {
+  color: var(--color-bright-red);
+  font-weight: 700; /* Adjusted for Playfair Display */
+  text-shadow: 0 0 10px rgba(216, 64, 64, 0.7); /* Subtle initial glow */
+  transition: text-shadow 0.3s ease;
+}
+
+.hero h1 .highlight:hover {
+  text-shadow: 0 0 20px var(--color-bright-red), 0 0 30px rgba(216, 64, 64, 0.5); /* Enhanced glow on hover */
+}
+
 
 .hero p {
   font-size: 1.5em;
