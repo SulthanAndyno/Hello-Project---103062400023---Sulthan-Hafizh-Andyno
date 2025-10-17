@@ -32,7 +32,7 @@ const Navbar = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
+          {/* <li><a href="#experience">Experience</a></li> */}
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className="hamburger-menu" onClick={toggleMenu}>
@@ -42,7 +42,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           className="mobile-nav-overlay"
           initial="hidden"
           animate="visible"
@@ -56,7 +56,7 @@ const Navbar = () => {
             <li><a href="#about" onClick={toggleMenu}>About</a></li>
             <li><a href="#skills" onClick={toggleMenu}>Skills</a></li>
             <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
-            <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+            {/* <li><a href="#experience" onClick={toggleMenu}>Experience</a></li> */}
             <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
           </ul>
         </motion.div>
