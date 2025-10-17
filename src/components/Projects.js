@@ -2,6 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+// <<< IMPOR SEMUA GAMBAR PROYEK DI SINI
+// import projectEcommerce from '../assets/images/project-ecommerce.jpg';
+// import projectTaskManager from '../assets/images/project-task-manager.png';
+// import projectBlog from '../assets/images/project-blog.jpg';
+// import projectWeatherApp from '../assets/images/project-weather-app.png';
+
+
 const Projects = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
