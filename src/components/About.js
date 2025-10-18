@@ -64,7 +64,7 @@ const About = () => {
               My goal is to grow into a developer who doesn’t just build products, but creates experiences — ones that connect people, simplify lives, and leave a lasting impression.
             </p>
             <motion.a 
-              href="/path/to/your-cv.pdf" // Ganti dengan path CV kamu
+              href="https://drive.google.com/file/d/1tet08SQAtft1fdndzfc6hDv9Yg5T2NLs/view?usp=sharing"
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn"
@@ -72,7 +72,7 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Download CV
+              experience
             </motion.a>
           </motion.div>
         </div>
