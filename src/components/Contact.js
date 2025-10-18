@@ -104,16 +104,16 @@ const Contact = () => {
         </motion.form>
 
         <motion.div className="social-links" variants={itemVariants}>
-          <a href="mailto:sulthan.andyno@example.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:sulthandyno@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope /> Email
           </a>
-          <a href="https://linkedin.com/in/sulthanandyno" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/sulthan-h-andyno/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin /> LinkedIn
           </a>
           <a href="https://github.com/sulthanandyno" target="_blank" rel="noopener noreferrer">
             <FaGithub /> GitHub
           </a>
-          <a href="https://instagram.com/sulthan.andyno" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/sulthanandyno/" target="_blank" rel="noopener noreferrer">
             <FaInstagram /> Instagram
           </a>
         </motion.div>
