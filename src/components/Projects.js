@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import fins from '../assets/demo_fins.png';
 // <<< IMPOR SEMUA GAMBAR PROYEK DI SINI
-// import projectEcommerce from '../assets/images/project-ecommerce.jpg';
+// import fins from '..\assets\demo_fins.png';
 // import projectTaskManager from '../assets/images/project-task-manager.png';
 // import projectBlog from '../assets/images/project-blog.jpg';
 // import projectWeatherApp from '../assets/images/project-weather-app.png';
@@ -18,11 +18,11 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: 'E-commerce React App',
-      description: 'A full-featured e-commerce platform built with React, Redux, and Firebase for authentication and database.',
-      image: 'https://via.placeholder.com/400x220/8E1616/EEEEEE?text=E-commerce+App',
+      title: 'fins',
+      description: 'Financial Insight adalah aplikasi web full-stack yang dirancang untuk merevolusi cara pengguna mengelola keuangan pribadi. FINS tidak hanya berfungsi sebagai alat pencatat transaksi yang intuitif, tetapi juga sebagai asisten finansial cerdas yang didukung oleh AI dari IBM Granite.',
+      image: fins,
       tech: ['React', 'Redux', 'Firebase', 'Stripe'],
-      demoLink: '#', // Ganti dengan link proyek kamu
+      demoLink: 'https://finsid.netlify.app/', // Ganti dengan link proyek kamu
       sourceLink: '#', // Ganti dengan link GitHub kamu
     },
     {
@@ -43,15 +43,15 @@ const Projects = () => {
       demoLink: '#',
       sourceLink: '#',
     },
-    {
-      id: 4,
-      title: 'Weather Dashboard',
-      description: 'Real-time weather application using external APIs, featuring dynamic backgrounds and forecasts.',
-      image: 'https://via.placeholder.com/400x220/8E1616/EEEEEE?text=Weather+App',
-      tech: ['React', 'API Integration', 'CSS'],
-      demoLink: '#',
-      sourceLink: '#',
-    },
+    // {
+    //   id: 4,
+    //   title: 'Weather Dashboard',
+    //   description: 'Real-time weather application using external APIs, featuring dynamic backgrounds and forecasts.',
+    //   image: 'https://via.placeholder.com/400x220/8E1616/EEEEEE?text=Weather+App',
+    //   tech: ['React', 'API Integration', 'CSS'],
+    //   demoLink: '#',
+    //   sourceLink: '#',
+    // },
   ];
 
   const containerVariants = {
@@ -107,7 +107,7 @@ const Projects = () => {
               <p>{project.description}</p>
               <div className="card-actions">
                 <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="btn">View Demo</a>
-                <a href={project.sourceLink} target="_blank" rel="noopener noreferrer" className="btn">Source Code</a>
+                {/* <a href={project.sourceLink} target="_blank" rel="noopener noreferrer" className="btn">Source Code</a> */}
               </div>
             </div>
           </motion.div>
