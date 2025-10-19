@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-logo">Sulthan Andyno</div>
       <p className="quote">"Code. Create. Connect."</p>
       <div className="social-icons">
-        <a href="https://linkedin.com/in/sulthanandyno" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/sulthan-h-andyno" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
         <a href="https://github.com/sulthanandyno" target="_blank" rel="noopener noreferrer">
