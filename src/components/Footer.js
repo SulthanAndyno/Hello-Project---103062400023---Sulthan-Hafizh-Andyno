@@ -5,8 +5,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
-      <div className="footer-logo">Sulthan Andyno</div>
-      <p className="quote">"Code. Create. Connect."</p>
+      <div className="footer-logo"></div>
+      <p className="quote">"Code, Create, Connect."</p>
       <div className="social-icons">
         <a href="https://www.linkedin.com/in/sulthan-h-andyno" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
@@ -18,7 +18,7 @@ const Footer = () => {
           <FaInstagram />
         </a>
       </div>
-      <p>&copy; {currentYear} Sulthan Andyno. All rights reserved.</p>
+      <p>&copy; Sulthan Andyno. All rights reserved.</p>
     </footer>
   );
 };
