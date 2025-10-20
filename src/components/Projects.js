@@ -2,12 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import fins from '../assets/demo_fins.png';
-// <<< IMPOR SEMUA GAMBAR PROYEK DI SINI
-// import fins from '..\assets\demo_fins.png';
-// import projectTaskManager from '../assets/images/project-task-manager.png';
-// import projectBlog from '../assets/images/project-blog.jpg';
-// import projectWeatherApp from '../assets/images/project-weather-app.png';
-
+import maymart from '../assets/demo_maymart.png';
+import tm from '../assets/demo_taskreminder.png';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -18,29 +14,29 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: 'fins',
-      description: 'Financial Insight adalah aplikasi web full-stack yang dirancang untuk merevolusi cara pengguna mengelola keuangan pribadi. FINS tidak hanya berfungsi sebagai alat pencatat transaksi yang intuitif, tetapi juga sebagai asisten finansial cerdas yang didukung oleh AI dari IBM Granite.',
+      title: 'FINS',
+      description: 'Financial Insight adalah aplikasi web yang dirancang untuk para pengguna mengelola keuangan pribadi, dengan fitur sebagai asisten finansial cerdas yang didukung oleh AI dari IBM Granite.',
       image: fins,
-      tech: ['React', 'Redux', 'Firebase', 'Stripe'],
+      tech: ['React', 'Tailwind', 'Postgres', 'IBM Granite AI'],
       demoLink: 'https://finsid.netlify.app/', // Ganti dengan link proyek kamu
       sourceLink: '#', // Ganti dengan link GitHub kamu
     },
     {
       id: 2,
-      title: 'Task Manager (MERN Stack)',
-      description: 'A complete task management application with a Node.js, Express, MongoDB backend, and a React frontend.',
-      image: 'https://via.placeholder.com/400x220/8E1616/EEEEEE?text=Task+Manager',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-      demoLink: '#',
+      title: 'MAYMART',
+      description: 'MAYMART adalah sebuah platform e-commerce yang didesain untuk menjual produk-produk segar, khususnya sayuran, langsung dari petani ke konsumen.',
+      image: maymart,
+      tech: ['HTML', 'CSS', 'Javascript',],
+      demoLink: 'https://maymart.netlify.app/',
       sourceLink: '#',
     },
     {
       id: 3,
-      title: 'Personal Blog with Next.js',
-      description: 'A static personal blog built with Next.js and Markdown for content, deployed to Vercel.',
-      image: 'https://via.placeholder.com/400x220/8E1616/EEEEEE?text=Personal+Blog',
-      tech: ['Next.js', 'Markdown', 'Vercel'],
-      demoLink: '#',
+      title: 'Task Reminder Bot',
+      description: 'Task Reminder Bot adalah sebuah Bot Telegram yang dibuat menggunakan Golang untuk membantu pengguna dalam mengelola tugas dan pengingat secara efisien.',
+      image: tm,
+      tech: ['Go', 'Postgres', 'docker'],
+      demoLink: 'https://t.me/Shuureminderbot',
       sourceLink: '#',
     },
     // {
