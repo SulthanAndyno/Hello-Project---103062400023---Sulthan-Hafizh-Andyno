@@ -19,14 +19,6 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Untuk Formspree, ganti action URL ini dengan URL Formspree kamu
-    // https://formspree.io/f/{your-form-id}
-    alert('Pesan terkirim! (Ini hanya simulasi. Gunakan Formspree/EmailJS untuk fungsi nyata)');
-    console.log('Form data submitted:', formData);
-    setFormData({ name: '', email: '', message: '' }); // Reset form
-  };
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -61,12 +53,11 @@ const Contact = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <motion.p variants={itemVariants}>Let’s collaborate or just say hi 👋</motion.p>
+        <motion.p variants={itemVariants}>Let’s collaborate !!</motion.p>
         
         <motion.form 
           className="contact-form" 
-          onSubmit={handleSubmit}
-          action="https://formspree.io/f/YOUR_FORMSPREE_ID" // GANTI DENGAN ID FORMSPREE KAMU!
+          action="https://formspree.io/f/mzzjqpgj" //id formspree
           method="POST"
           variants={itemVariants}
         >
