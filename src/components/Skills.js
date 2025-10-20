@@ -2,18 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-// Import ikon Font Awesome
+// Import ikon Font Awesome yang digunakan
 import {
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaLaravel, FaGitAlt, FaFigma, FaVuejs
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaFigma, FaVuejs
 } from 'react-icons/fa';
 
-// Import ikon Devicons
+// Import ikon Devicons yang digunakan
 import {
-  DiGo, DiVisualstudio, DiMysql
+  DiVisualstudio
 } from 'react-icons/di';
 
-// Import ikon Simple Icons (for Tailwind, Vite)
-import { SiTailwindcss, SiVite } from 'react-icons/si';
+// Import ikon Simple Icons (for Tailwind) yang digunakan
+import { SiTailwindcss } from 'react-icons/si';
 
 
 const Skills = () => {
@@ -42,12 +42,10 @@ const Skills = () => {
     {
       name: 'Tools',
       skills: [
-        { name: 'Git & GitHub', icon: <FaGitAlt /> }, // Using FaGitAlt for Git and GitHub
+        { name: 'Git & GitHub', icon: <FaGitAlt /> },
         { name: 'VS Code', icon: <DiVisualstudio /> },
-        // XAMPP icon is not standard in react-icons; using DiMysql as a proxy if you manage local servers.
-        // If XAMPP specifically is important, you might need a custom SVG or just text.
-        // For now, removing XAMPP and Go as they weren't in the new list, keeping only listed tools.
         { name: 'Figma', icon: <FaFigma /> },
+        // Vite tidak ada dalam daftar skill yang kamu berikan, jadi tidak diimpor/ditambahkan
       ],
     },
   ];
