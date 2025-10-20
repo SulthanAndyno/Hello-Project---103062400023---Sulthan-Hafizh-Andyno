@@ -28,7 +28,7 @@ const Skills = () => {
       skills: [
         { name: 'HTML5', icon: <FaHtml5 /> },
         { name: 'CSS3', icon: <FaCss3Alt /> },
-        { name: 'JavaScript (ES6+)', icon: <FaJsSquare /> },
+        { name: 'JavaScript', icon: <FaJsSquare /> },
       ],
     },
     {
@@ -40,7 +40,7 @@ const Skills = () => {
       ],
     },
     {
-      name: 'Tools & Database',
+      name: 'Tools',
       skills: [
         { name: 'Git & GitHub', icon: <FaGitAlt /> }, // Using FaGitAlt for Git and GitHub
         { name: 'VS Code', icon: <DiVisualstudio /> },
@@ -48,7 +48,6 @@ const Skills = () => {
         // If XAMPP specifically is important, you might need a custom SVG or just text.
         // For now, removing XAMPP and Go as they weren't in the new list, keeping only listed tools.
         { name: 'Figma', icon: <FaFigma /> },
-        { name: 'Vite', icon: <SiVite /> },
       ],
     },
   ];
@@ -75,7 +74,7 @@ const Skills = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        My Skills / Tech Stack
+        My Skills
       </motion.h2>
       <motion.div
         initial="hidden"
